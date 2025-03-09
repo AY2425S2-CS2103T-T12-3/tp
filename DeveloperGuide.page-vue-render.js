@@ -260,7 +260,7 @@ with(this){return _c('p',[_c('em',[_v("{More to be added}")])])}
 with(this){return _c('h3',{attrs:{"id":"glossary"}},[_v("Glossary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#glossary","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('strong',[_v("Mainstream OS")]),_v(": Windows, Linux, Unix, MacOS")]),_v(" "),_c('li',[_c('strong',[_v("Private contact detail")]),_v(": A contact detail that is not meant to be shared with others")])])}
+with(this){return _c('ul',[_c('li',[_c('strong',[_v("Real Estate Agent")]),_v(": A professional responsible for managing client contacts and property transactions.")]),_v(" "),_c('li',[_c('strong',[_v("Client")]),_v(": A member of the public who intends to enter into an agreement with a real estate agent to purchase, sell or invest in real estate properties.")]),_v(" "),_c('li',[_c('strong',[_v("Contact Details")]),_v(": Information including name, phone number, email, and/or other personal details of a client")]),_v(" "),_c('li',[_c('strong',[_v("Command-Line Interface (CLI)")]),_v(": A text-based user interface that allows users to interact with the system by typing commands.")]),_v(" "),_c('li',[_c('strong',[_v("Address Book")]),_v(": A digital storage system that manages client contacts and related information.")]),_v(" "),_c('li',[_c('strong',[_v("Property Viewing")]),_v(": A scheduled meeting between the real estate agent and a client to inspect a property")]),_v(" "),_c('li',[_c('strong',[_v("Deal Status")]),_v(": The current status of a property transaction which falls into three categories: Pending, Closed or In Negotiation")])])}
 },function anonymous(
 ) {
 with(this){return _c('h2',{attrs:{"id":"appendix-instructions-for-manual-testing"}},[_c('strong',[_v("Appendix: Instructions for manual testing")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#appendix-instructions-for-manual-testing","onclick":"event.stopPropagation()"}})])}
@@ -284,6 +284,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])]),_v(" "),_c('li',[_c('p',[_c('em',[_v("{ more test cases …​ }")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Sun, 9 Mar 2025, 21:30:11 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Sun, 9 Mar 2025, 22:31:10 GMT+8]")])])])}
 }];
   
