@@ -13,6 +13,8 @@ import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.model.client.Client;
 import seedu.address.model.deal.Deal;
+import seedu.address.model.property.Property;
+import seedu.address.model.schedule.Schedule;
 
 /**
  * Represents the in-memory model of the address book data.
@@ -24,6 +26,8 @@ public class ModelManager implements Model {
     private final UserPrefs userPrefs;
     private final FilteredList<Client> filteredClients;
     private final FilteredList<Deal> filteredDeals;
+    private final FilteredList<Property> filteredProperties;
+    private final FilteredList<Schedule> filteredSchedules;
 
     /**
      * Initializes a ModelManager with the given addressBook and userPrefs.
@@ -37,6 +41,8 @@ public class ModelManager implements Model {
         this.userPrefs = new UserPrefs(userPrefs);
         filteredClients = new FilteredList<>(this.addressBook.getClientList());
         filteredDeals = new FilteredList<>(this.addressBook.getDealList());
+        filteredProperties = new FilteredList<>(this.addressBook.getPropertyList());
+        filteredSchedules = new FilteredList<>(this.addressBook.getScheduleList());
     }
 
     public ModelManager() {
@@ -114,6 +120,18 @@ public class ModelManager implements Model {
         addressBook.setClient(target, editedClient);
     }
 
+    @Override
+    public boolean hasDeal(Deal deal) {
+        requireNonNull(deal);
+        return addressBook.hasDeal(deal);
+    }
+
+    @Override
+    public void addDeal(Deal deal) {
+        addressBook.addDeal(deal);
+        updateFilteredDealList(PREDICATE_SHOW_ALL_DEALS);
+    }
+
     //=========== Filtered Client List Accessors =============================================================
 
     /**
@@ -131,31 +149,55 @@ public class ModelManager implements Model {
         filteredClients.setPredicate(predicate);
     }
 
-    //=========== Filtered Deal List Accessors ================================================================
+    //=========== Filtered Deal List Accessors =============================================================
 
-    @Override
-    public boolean hasDeal(Deal deal) {
-        requireNonNull(deal);
-        return addressBook.hasDeal(deal);
-    }
-
-    @Override
-    public void addDeal(Deal deal) {
-        addressBook.addDeal(deal);
-        updateFilteredDealList(PREDICATE_SHOW_ALL_DEALS);
-    }
-
+    /**
+     * Returns an unmodifiable view of the list of {@code Deal} backed by the internal list of
+     * {@code versionedAddressBook}
+     */
     @Override
     public ObservableList<Deal> getFilteredDealList() {
         return filteredDeals;
     }
 
-    /**
-     * Updates the filter of the filtered deal list to filter by the given {@code predicate}.
-     */
+    @Override
     public void updateFilteredDealList(Predicate<Deal> predicate) {
         requireNonNull(predicate);
         filteredDeals.setPredicate(predicate);
+    }
+
+    //=========== Filtered Property List Accessors =============================================================
+
+    /**
+     * Returns an unmodifiable view of the list of {@code Property} backed by the internal list of
+     * {@code versionedAddressBook}
+     */
+    @Override
+    public ObservableList<Property> getFilteredPropertyList() {
+        return filteredProperties;
+    }
+
+    @Override
+    public void updateFilteredPropertyList(Predicate<Property> predicate) {
+        requireNonNull(predicate);
+        filteredProperties.setPredicate(predicate);
+    }
+
+    //=========== Filtered Schedule List Accessors =============================================================
+
+    /**
+     * Returns an unmodifiable view of the list of {@code Schedule} backed by the internal list of
+     * {@code versionedAddressBook}
+     */
+    @Override
+    public ObservableList<Schedule> getFilteredScheduleList() {
+        return filteredSchedules;
+    }
+
+    @Override
+    public void updateFilteredScheduleList(Predicate<Schedule> predicate) {
+        requireNonNull(predicate);
+        filteredSchedules.setPredicate(predicate);
     }
 
     @Override

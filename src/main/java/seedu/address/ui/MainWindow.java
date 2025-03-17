@@ -5,11 +5,11 @@ import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextInputControl;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.LogsCenter;
@@ -19,6 +19,8 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.ui.listpanels.ClientListPanel;
 import seedu.address.ui.listpanels.DealListPanel;
+import seedu.address.ui.listpanels.PropertyListPanel;
+import seedu.address.ui.listpanels.ScheduleListPanel;
 
 /**
  * The Main Window. Provides the basic application layout containing
@@ -36,6 +38,8 @@ public class MainWindow extends UiPart<Stage> {
     // Independent Ui parts residing in this Ui container
     private ClientListPanel clientListPanel;
     private DealListPanel dealListPanel;
+    private PropertyListPanel propertyListPanel;
+    private ScheduleListPanel scheduleListPanel;
     private ResultDisplay resultDisplay;
     private HelpWindow helpWindow;
 
@@ -46,13 +50,10 @@ public class MainWindow extends UiPart<Stage> {
     private MenuItem helpMenuItem;
 
     @FXML
-    private StackPane clientListPanelPlaceholder;
+    private SplitPane listPlanesPlaceholder;
 
     @FXML
     private StackPane resultDisplayPlaceholder;
-
-    @FXML
-    private StackPane statusbarPlaceholder;
 
     /**
      * Creates a {@code MainWindow} with the given {@code Stage} and {@code Logic}.
@@ -114,16 +115,15 @@ public class MainWindow extends UiPart<Stage> {
      * Fills up all the placeholders of this window.
      */
     void fillInnerParts() {
-        // Create client list panel
         clientListPanel = new ClientListPanel(logic.getFilteredClientList());
-        // Create deal list panel
         dealListPanel = new DealListPanel(logic.getFilteredDealList());
-        // Create a VBox to hold both panels
-        VBox listsVBox = new VBox();
-        listsVBox.getChildren().add(clientListPanel.getRoot());
-        listsVBox.getChildren().add(dealListPanel.getRoot());
-        // Add the VBox to the placeholder
-        clientListPanelPlaceholder.getChildren().add(listsVBox);
+        propertyListPanel = new PropertyListPanel(logic.getFilteredPropertyList());
+        scheduleListPanel = new ScheduleListPanel(logic.getFilteredScheduleList());
+
+        listPlanesPlaceholder.getItems().add(clientListPanel.getRoot());
+        listPlanesPlaceholder.getItems().add(propertyListPanel.getRoot());
+        listPlanesPlaceholder.getItems().add(dealListPanel.getRoot());
+        listPlanesPlaceholder.getItems().add(scheduleListPanel.getRoot());
 
         resultDisplay = new ResultDisplay();
         resultDisplayPlaceholder.getChildren().add(resultDisplay.getRoot());
@@ -170,10 +170,6 @@ public class MainWindow extends UiPart<Stage> {
         logic.setGuiSettings(guiSettings);
         helpWindow.hide();
         primaryStage.hide();
-    }
-
-    public ClientListPanel getClientListPanel() {
-        return clientListPanel;
     }
 
     /**

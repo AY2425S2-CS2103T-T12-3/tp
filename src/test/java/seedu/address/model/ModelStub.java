@@ -7,6 +7,8 @@ import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.model.client.Client;
 import seedu.address.model.deal.Deal;
+import seedu.address.model.property.Property;
+import seedu.address.model.schedule.Schedule;
 
 /**
  * A default model stub that have all of the methods failing.
@@ -81,6 +83,22 @@ public class ModelStub implements Model {
     public void updateFilteredClientList(Predicate<Client> predicate) {
         throw new AssertionError("This method should not be called.");
     }
+
+    @Override
+    public void updateFilteredDealList(Predicate<Deal> predicate) {
+        throw new AssertionError("This method should not be called.");
+    }
+
+    @Override
+    public void updateFilteredPropertyList(Predicate<Property> predicate) {
+        throw new AssertionError("This method should not be called.");
+    }
+
+    @Override
+    public void updateFilteredScheduleList(Predicate<Schedule> predicate) {
+        throw new AssertionError("This method should not be called.");
+    }
+
     @Override
     public boolean hasDeal(Deal deal) {
         throw new AssertionError("This method should not be called.");
@@ -93,6 +111,16 @@ public class ModelStub implements Model {
 
     @Override
     public ObservableList<Deal> getFilteredDealList() {
+        throw new AssertionError("This method should not be called.");
+    }
+
+    @Override
+    public ObservableList<Property> getFilteredPropertyList() {
+        throw new AssertionError("This method should not be called.");
+    }
+
+    @Override
+    public ObservableList<Schedule> getFilteredScheduleList() {
         throw new AssertionError("This method should not be called.");
     }
 }

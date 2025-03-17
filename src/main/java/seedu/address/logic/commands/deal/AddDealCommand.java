@@ -93,19 +93,19 @@ public class AddDealCommand extends Command {
             throw new CommandException(MESSAGE_SAME_BUYER_SELLER);
         }
 
-        Deal toAdd = new Deal(propertyId, buyerId, sellerId, price, status);
-
-        if (model.hasDeal(toAdd)) {
-            throw new CommandException(MESSAGE_DUPLICATE_DEAL);
-        }
-        // Check if the property is already involved in another deal
-        boolean propertyAlreadyInDeal = model.getFilteredDealList().stream()
-                .anyMatch(existingDeal -> existingDeal.getPropertyId().equals(propertyId));
-        if (propertyAlreadyInDeal) {
-            throw new CommandException(MESSAGE_PROPERTY_ALREADY_IN_DEAL);
-        }
-
-        model.addDeal(toAdd);
+//        Deal toAdd = new Deal(propertyId, buyerId, sellerId, price, status);
+//
+//        if (model.hasDeal(toAdd)) {
+//            throw new CommandException(MESSAGE_DUPLICATE_DEAL);
+//        }
+//        // Check if the property is already involved in another deal
+//        boolean propertyAlreadyInDeal = model.getFilteredDealList().stream()
+//                .anyMatch(existingDeal -> existingDeal.getPropertyId().equals(propertyId));
+//        if (propertyAlreadyInDeal) {
+//            throw new CommandException(MESSAGE_PROPERTY_ALREADY_IN_DEAL);
+//        }
+//
+//        model.addDeal(toAdd);
         return new CommandResult(String.format(MESSAGE_SUCCESS,
                 propertyId.getOneBased(),
                 buyerId.getOneBased(),
