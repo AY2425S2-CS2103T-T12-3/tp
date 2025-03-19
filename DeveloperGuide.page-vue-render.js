@@ -329,7 +329,7 @@ with(this){return _c('p',[_v("3a. User cancels the deletion."),_c('br'),_v(" "),
 with(this){return _c('p',[_v("4a. System fails to delete the property listing."),_c('br'),_v("\n    4a1. System displays an error message."),_c('br'),_v(" "),_c('strong',[_v("Use case ends.")])])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('strong',[_v("Use case: Add Client Meeting")])])}
+with(this){return _c('p',[_c('strong',[_v("Use case: Add Event to Schedule")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Actor:")]),_v(" User (Real Estate Agent)"),_c('br'),_v(" "),_c('strong',[_v("Preconditions:")]),_v(" The system is running.")])}
@@ -338,7 +338,7 @@ with(this){return _c('p',[_c('strong',[_v("Actor:")]),_v(" User (Real Estate Age
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("User requests to add a new meeting and provides meeting details.")]),_v(" "),_c('li',[_v("System validates input.")]),_v(" "),_c('li',[_v("System checks for clashes in schedule.")]),_v(" "),_c('li',[_v("System adds the meeting to the schedule.")]),_v(" "),_c('li',[_v("System informs user the outcome of the addition.")])])}
+with(this){return _c('ol',[_c('li',[_v("User requests to add a new event and provides event details.")]),_v(" "),_c('li',[_v("System validates input.")]),_v(" "),_c('li',[_v("System checks for clashes in schedule.")]),_v(" "),_c('li',[_v("System adds the event to the schedule.")]),_v(" "),_c('li',[_v("System informs user the outcome of the addition.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case ends.")])])}
@@ -416,6 +416,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])]),_v(" "),_c('li',[_c('p',[_c('em',[_v("{ more test cases …​ }")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Wed, 19 Mar 2025, 2:09:54 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Wed, 19 Mar 2025, 12:20:32 GMT+8]")])])])}
 }];
   
