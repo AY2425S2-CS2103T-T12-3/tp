@@ -173,6 +173,14 @@
         "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
       "headingKeywords": {}
+    },
+    {
+      "src": "team/kumar2215.md",
+      "title": "Kumar's Project Portfolio Page",
+      "headings": {
+        "project-reconnect": "Project: REconnect"
+      },
+      "headingKeywords": {}
     }
   ]
 }

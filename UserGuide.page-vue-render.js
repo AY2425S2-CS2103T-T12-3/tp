@@ -341,7 +341,7 @@ with(this){return _c('p',[_c('strong',[_v("Q")]),_v(": Do closed deals still app
 with(this){return _c('p',[_c('strong',[_v("Q")]),_v(": If I update a client's name, will it automatically update in all related deals?"),_c('br'),_v(" "),_c('strong',[_v("A")]),_v(": Yes, updating a client's name will automatically update their name in all deals where they appear as a buyer or seller.")])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('strong',[_v("Q")]),_v(": Can I convert the price to a different currency?"),_c('br'),_v(" "),_c('strong',[_v("A")]),_v(": No, REconnect currently only supports prices in Singapore dollars (S$). All prices are displayed and stored in thousands of S$.")])}
+with(this){return _c('p',[_c('strong',[_v("Q")]),_v(": Can I convert the price to a different currency?"),_c('br'),_v(" "),_c('strong',[_v("A")]),_v(": No, REconnect currently only supports prices in Singapore dollars (S$). "),_c('em',[_v("All prices are displayed and stored in thousands of S$")]),_v(".")])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Q")]),_v(": What's the difference between using "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("AND_")]),_v(" and "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("OR_")]),_v(" in deal searches?"),_c('br'),_v(" "),_c('strong',[_v("A")]),_v(": Using "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("AND_")]),_v(" means all conditions must be met (e.g., specific buyer AND specific status), while "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("OR_")]),_v(" means any condition can be met (e.g., specific buyer OR specific status).")])}
@@ -386,6 +386,6 @@ with(this){return _c('h3',{attrs:{"id":"miscellaneous-commands-2"}},[_v("Miscell
 with(this){return _c('div',{staticClass:"table-responsive"},[_c('table',{staticClass:"markbind-table table table-bordered table-striped"},[_c('thead',[_c('tr',[_c('th',[_v("Action")]),_v(" "),_c('th',[_v("Format, Examples")])])]),_v(" "),_c('tbody',[_c('tr',[_c('td',[_c('strong',[_v("List All")])]),_v(" "),_c('td',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("list_all")])])]),_v(" "),_c('tr',[_c('td',[_c('strong',[_v("Help")])]),_v(" "),_c('td',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("help")])])]),_v(" "),_c('tr',[_c('td',[_c('strong',[_v("Exit")])]),_v(" "),_c('td',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("exit")])])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 12:09:21 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 12:35:00 GMT+8]")])])])}
 }];
   
