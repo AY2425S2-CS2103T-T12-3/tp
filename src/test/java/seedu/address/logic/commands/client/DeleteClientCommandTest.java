@@ -9,7 +9,6 @@ import static seedu.address.logic.commands.CommandTestUtil.showClientAtIndex;
 import static seedu.address.testutil.TypicalClients.getTypicalAddressBook;
 import static seedu.address.testutil.TypicalDeals.DEAL1;
 import static seedu.address.testutil.TypicalDeals.DEAL4;
-import static seedu.address.testutil.TypicalEvents.EVENT1;
 import static seedu.address.testutil.TypicalEvents.EVENT4;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
 import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
