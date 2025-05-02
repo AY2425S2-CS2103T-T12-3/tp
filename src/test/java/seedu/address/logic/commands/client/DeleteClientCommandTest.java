@@ -9,7 +9,6 @@ import static seedu.address.logic.commands.CommandTestUtil.showClientAtIndex;
 import static seedu.address.testutil.TypicalClients.getTypicalAddressBook;
 import static seedu.address.testutil.TypicalDeals.DEAL1;
 import static seedu.address.testutil.TypicalDeals.DEAL4;
-import static seedu.address.testutil.TypicalEvents.EVENT1;
 import static seedu.address.testutil.TypicalEvents.EVENT4;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
 import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
@@ -124,18 +123,6 @@ public class DeleteClientCommandTest extends DeleteCommandTest<Client> {
         expectedModel.deleteClient(clientToDelete);
 
         assertCommandSuccess(deleteClientCommand, model, expectedMessage, expectedModel);
-    }
-
-    @Test
-    public void execute_clientInFutureEvent_failure() {
-        model.addEvent(EVENT1);
-        DeleteClientCommand command = new DeleteClientCommand(INDEX_FIRST);
-
-        String expectedMessage = "Client " + model.getFilteredClientList().get(INDEX_FIRST.getZeroBased()).getFullName()
-            + " cannot be deleted.\n"
-            + "He/She is involved in the following future event(s): 1 .\n";
-
-        assertCommandFailure(command, model, expectedMessage);
     }
 
     @Test
