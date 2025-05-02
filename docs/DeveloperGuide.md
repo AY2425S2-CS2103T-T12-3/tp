@@ -10,6 +10,8 @@
 <page-nav-print />
 
 --------------------------------------------------------------------------------------------------------------------
+**The following section is adapted from the DG of https://github.com/AY2425S2-CS2103T-T12-4/tp/tree/master. 
+The original author is: [patil-np](https://github.com/patil-np).**
 
 ## **Acknowledgements**
 
