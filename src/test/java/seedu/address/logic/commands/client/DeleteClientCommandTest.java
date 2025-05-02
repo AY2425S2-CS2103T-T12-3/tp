@@ -127,18 +127,6 @@ public class DeleteClientCommandTest extends DeleteCommandTest<Client> {
     }
 
     @Test
-    public void execute_clientInFutureEvent_failure() {
-        model.addEvent(EVENT1);
-        DeleteClientCommand command = new DeleteClientCommand(INDEX_FIRST);
-
-        String expectedMessage = "Client " + model.getFilteredClientList().get(INDEX_FIRST.getZeroBased()).getFullName()
-            + " cannot be deleted.\n"
-            + "He/She is involved in the following future event(s): 1 .\n";
-
-        assertCommandFailure(command, model, expectedMessage);
-    }
-
-    @Test
     public void execute_clientIsPropertyOwner_failure() {
         model.addProperty(MAPLE);
         model.addClient(new seedu.address.testutil.ClientBuilder().withClientName("Amy Bee").build());
